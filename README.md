@@ -18,5 +18,39 @@
 ## 🚀 Instalación Local (Modo Desarrollador)
 
 1. **Clona o descarga este repositorio:**
-   ```bash
-   git clone [https://github.com/TU_USUARIO/IP-Threat-Radar.git](https://github.com/TU_USUARIO/IP-Threat-Radar.git)
+   `git clone https://github.com/TU_USUARIO/IP-Threat-Radar.git`
+2. Abre tu navegador basado en Chromium (Google Chrome, Microsoft Edge, Brave).
+3. Dirígete a la gestión de extensiones escribiendo en la barra de direcciones:
+   `chrome://extensions/`
+4. Activa el **Modo de desarrollador** en la esquina superior derecha.
+5. Haz clic en el botón **Cargar descomprimida** (*Load unpacked*) y selecciona la carpeta raíz del proyecto.
+
+---
+
+## 🛠️ Estructura del Proyecto
+
+* `manifest.json`: Configuración del Manifest V3 de la extensión
+* `background.js`: Service worker para la gestión del menú contextual
+* `popup.html`: Interfaz de usuario (Escáner y Ajustes)
+* `popup.js`: Lógica principal, peticiones API y exportación a PDF
+* `styles.css`: Estilos visuales en modo oscuro
+* `jspdf.umd.min.js`: Librería ligera para generación de reportes PDF
+* `icon16.png`: Icono de extensión (16x16)
+* `icon48.png`: Icono de extensión (48x48)
+* `icon128.png`: Icono de extensión (128x128)
+
+---
+
+## 🔑 Configuración de VirusTotal
+
+Para habilitar el escaneo contra los motores antivirus de VirusTotal:
+1. Abre el menú flotante de la extensión.
+2. Ve a la pestaña **Ajustes**.
+3. Pega tu clave **API Key de VirusTotal v3** (puedes obtener una gratuita registrándote en VirusTotal).
+4. Haz clic en **Guardar Configuración**.
+
+---
+
+## 📄 Licencia
+
+Este proyecto está distribuido bajo la licencia **MIT**.
