@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "IP Threat Radar & Geolocation",
+  "version": "1.0.0",
+  "description": "Revisa IPs en VirusTotal, geolocalízalas y genera reportes PDF instantáneos.",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "permissions": [
+    "storage",
+    "contextMenus"
+  ],
+  "host_permissions": [
+    "https://www.virustotal.com/*",
+    "https://ipwho.is/*",
+    "https://api.ipify.org/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "IP Threat Radar",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  }
+}

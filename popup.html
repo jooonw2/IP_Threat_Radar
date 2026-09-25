@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>IP Threat Radar</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="jspdf.umd.min.js"></script>
+</head>
+<body>
+  <div class="header">
+    <div class="logo-title">
+      <img src="icon48.png" alt="Logo" />
+      <span>IP Threat Radar</span>
+    </div>
+    <div class="tabs">
+      <button class="tab-btn active" id="tab-scan">Escáner</button>
+      <button class="tab-btn" id="tab-settings">Ajustes</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- VISTA ESCÁNER -->
+    <div id="view-scan">
+      <div class="input-group">
+        <input type="text" id="ip-input" placeholder="Ej. 8.8.8.8" />
+        <button class="btn" id="btn-analyze">Analizar</button>
+      </div>
+
+      <div class="quick-actions">
+        <button class="link-btn" id="btn-my-ip">Usar mi IP actual</button>
+      </div>
+
+      <div id="error-msg" class="hidden" style="color: #f85149; font-size: 11px; margin-bottom: 10px; text-align: center;">
+        ⚠️ El texto seleccionado no es una dirección IP válida.
+      </div>
+
+      <div id="results" class="hidden">
+        <div class="card">
+          <div class="badge-row">
+            <span class="label">Estado VirusTotal</span>
+            <span id="badge-status" class="status-badge status-clean">Limpia</span>
+          </div>
+          <div class="data-row">
+            <span class="label">Detección VT</span>
+            <span id="vt-ratio" class="value">0 / 93</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="data-row">
+            <span class="label">País / Ubicación</span>
+            <span id="geo-location" class="value">-</span>
+          </div>
+          <div class="data-row">
+            <span class="label">Ciudad</span>
+            <span id="geo-city" class="value">-</span>
+          </div>
+          <div class="data-row">
+            <span class="label">ISP</span>
+            <span id="geo-isp" class="value">-</span>
+          </div>
+          <div class="data-row">
+            <span class="label">ASN</span>
+            <span id="geo-asn" class="value">-</span>
+          </div>
+        </div>
+
+        <button class="btn btn-full vt-btn" id="btn-open-vt">
+          🌐 Abrir informe completo en VirusTotal
+        </button>
+        <button class="btn btn-full pdf-btn" id="btn-pdf">
+          📄 Generar Reporte PDF
+        </button>
+      </div>
+    </div>
+
+    <!-- VISTA AJUSTES -->
+    <div id="view-settings" class="hidden">
+      <div class="card">
+        <div style="margin-bottom: 8px; font-weight: 600; color: #f0f6fc;">Clave API de VirusTotal v3</div>
+        <p style="color: #8b949e; font-size: 11px; margin-bottom: 8px;">
+          Ingresa tu clave API de VirusTotal para realizar el escaneo de seguridad.
+        </p>
+        <input type="password" id="vt-api-key" placeholder="Pega tu API Key aquí..." style="width: 100%; margin-bottom: 10px;" />
+        <button class="btn btn-full" id="btn-save-key">Guardar Configuración</button>
+        <div id="save-msg" style="color: #3fb950; font-size: 11px; margin-top: 6px; text-align: center;" class="hidden">
+          ✓ Configuración guardada con éxito
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer">
+      IP Threat Radar v1.0.0
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
