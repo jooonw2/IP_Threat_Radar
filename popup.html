@@ -14,6 +14,7 @@
     </div>
     <div class="tabs">
       <button class="tab-btn active" id="tab-scan">Escáner</button>
+      <button class="tab-btn" id="tab-history">Historial</button>
       <button class="tab-btn" id="tab-settings">Ajustes</button>
     </div>
   </div>
@@ -37,7 +38,7 @@
       <div id="results" class="hidden">
         <div class="card">
           <div class="badge-row">
-            <span class="label">Estado VirusTotal</span>
+            <span class="label">Estado / Tipo</span>
             <span id="badge-status" class="status-badge status-clean">Limpia</span>
           </div>
           <div class="data-row">
@@ -74,6 +75,19 @@
       </div>
     </div>
 
+    <!-- VISTA HISTORIAL -->
+    <div id="view-history" class="hidden">
+      <div class="card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+          <span style="font-weight: 600; color: #f0f6fc;">Historial Reciente</span>
+          <button class="btn btn-danger" id="btn-clear-history" style="padding: 4px 8px; font-size: 11px;">🗑️ Borrar Historial</button>
+        </div>
+        <div id="history-list">
+          <div class="history-empty">No hay búsquedas guardadas.</div>
+        </div>
+      </div>
+    </div>
+
     <!-- VISTA AJUSTES -->
     <div id="view-settings" class="hidden">
       <div class="card">
@@ -90,7 +104,7 @@
     </div>
     
     <div class="footer">
-      IP Threat Radar v1.0.0
+      IP Threat Radar v1.1.0
     </div>
   </div>
 

@@ -103,14 +103,13 @@ input:focus {
   background: #2ea043;
 }
 
-.btn-secondary {
-  background: #21262d;
-  color: #c9d1d9;
-  border: 1px solid #30363d;
+.btn-danger {
+  background: #da3633;
+  color: white;
 }
 
-.btn-secondary:hover {
-  background: #30363d;
+.btn-danger:hover {
+  background: #f85149;
 }
 
 .btn-full {
@@ -160,6 +159,7 @@ input:focus {
 .status-suspicious { background: rgba(210, 153, 34, 0.2); color: #d29922; border: 1px solid #bb8009; }
 .status-malicious { background: rgba(248, 81, 73, 0.2); color: #f85149; border: 1px solid #da3633; }
 .status-noapi { background: rgba(139, 148, 158, 0.2); color: #8b949e; border: 1px solid #30363d; }
+.status-private { background: rgba(88, 166, 255, 0.2); color: #58a6ff; border: 1px solid #1f6beb; }
 
 .data-row {
   display: flex;
@@ -215,4 +215,39 @@ input:focus {
   color: #d29922;
   font-size: 11px;
   font-weight: 500;
+}
+
+/* History styles */
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #21262d;
+  cursor: pointer;
+}
+
+.history-item:hover {
+  background: #21262d;
+  margin: 0 -12px;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.history-ip {
+  font-weight: 600;
+  color: #f0f6fc;
+  font-size: 12px;
+}
+
+.history-time {
+  font-size: 10px;
+  color: #8b949e;
+}
+
+.history-empty {
+  text-align: center;
+  color: #8b949e;
+  font-size: 12px;
+  padding: 16px 0;
 }
